@@ -77,13 +77,13 @@ function getSearchVal() {
       forecastRowEl = document.createElement("div");
       forecastRowEl.className = "\"row\"";
   
-      // loop over all forecasts (by 3-hour increments)
+      
       for (var i = 0; i < data.list.length; i++) {
   
-        // only look at forecasts around 3:00pm
+       
         if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
   
-          // create html elements for a bootstrap card
+         
           var colEl = document.createElement("div");
           colEl.classList.add("col-md-2");
           var cardEl = document.createElement("div");
@@ -108,7 +108,7 @@ function getSearchVal() {
           p2El.classList.add("card-text");
           p2El.textContent = "Humidity: " + data.list[i].main.humidity + "%";
   
-          // merge together and put on page
+          // put on a page
           colEl.appendChild(cardEl);
           bodyEl.appendChild(titleEl);
           bodyEl.appendChild(imgEl);
